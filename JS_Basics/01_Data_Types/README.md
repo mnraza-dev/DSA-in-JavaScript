@@ -8,3 +8,17 @@
 4. String
 5. Null
 6. Undefined
+
+# JavaScript is a dynamically typed language
+
+# Number - Numeric Data Type
+
+# String - Text Data Type
+
+# Boolean - Logical Data Type
+
+# Null - Null Data Type
+
+# Undefined 
+- It shows a variable that has been declared but never defined.
+
