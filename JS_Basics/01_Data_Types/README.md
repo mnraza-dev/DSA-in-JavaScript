@@ -20,5 +20,5 @@
 # Null - Null Data Type
 
 # Undefined 
-- It shows a variable that has been declared but never defined.
+It shows a variable that has been declared but never defined.
 
