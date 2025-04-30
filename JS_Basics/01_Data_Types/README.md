@@ -17,7 +17,8 @@
 
 ### Boolean - Logical Data Type
 
-### Null - Null Data Type
+### Null 
+It is a data type that is used to represent the absence of a value.
 
 ### Undefined 
 It shows a variable that has been declared but never defined.
