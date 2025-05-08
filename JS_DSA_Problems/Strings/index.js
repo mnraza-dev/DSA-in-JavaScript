@@ -31,13 +31,26 @@ console.log(reverseString("a"));         // "a"
 console.log(reverseString("racecar"));   // "racecar"
  */
 
-
 // 2. Check Palindrome
 // Write a function that checks whether a given string is a palindrome.
 // 📥 Input: "racecar"
 // 📤 Output: true
 
+// Solution 1: Simple Check (Clean & Easy)
 function isPalindrome(str) {
-    return str === str.split('').reverse().join('');
+  return str === str.split("").reverse().join("");
+}
+// Solution 2: 💪 Better Solution
+
+function isPalindrome(str) {
+  const cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+  let left = 0,
+    right = cleanStr.length - 1;
+
+  while (left < right) {
+    if (cleanStr[left] !== cleanStr[right]) return false;
+    left++;
+    right--;
   }
-  
+  return true;
+}
