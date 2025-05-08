@@ -17,7 +17,7 @@ reverseString("hello"); // Output: "olleh"
 // 🔁 Solution 2: Manual Loop
 
 function reverseString(str) {
-  let reversed = '';
+  let reversed = "";
   for (let i = str.length - 1; i >= 0; i--) {
     reversed += str[i];
   }
@@ -30,3 +30,12 @@ function reverseString(str) {
   if (str === "") return "";
   return reverseString(str.slice(1)) + str[0];
 }
+
+/**
+ 🔄 Test Cases
+
+console.log(reverseString("hello"));     // "olleh"
+console.log(reverseString(""));          // ""
+console.log(reverseString("a"));         // "a"
+console.log(reverseString("racecar"));   // "racecar"
+ */
