@@ -1,14 +1,5 @@
-/** 1. Reverse a string
-  Input: A string str
-  Output: The reversed version of str
-
-    Example:
-    Input: "hello"
-    Output: "olleh" 
-
- */
+// 1. Reverse a string
 // 🧪 Solution 1: Built-in Methods (Clean & Easy)
-
 function reverseString(str) {
   return str.split("").reverse().join("");
 }
@@ -39,3 +30,14 @@ console.log(reverseString(""));          // ""
 console.log(reverseString("a"));         // "a"
 console.log(reverseString("racecar"));   // "racecar"
  */
+
+
+// 2. Check Palindrome
+// Write a function that checks whether a given string is a palindrome.
+// 📥 Input: "racecar"
+// 📤 Output: true
+
+function isPalindrome(str) {
+    return str === str.split('').reverse().join('');
+  }
+  
