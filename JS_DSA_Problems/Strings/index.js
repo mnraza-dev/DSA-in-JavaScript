@@ -54,3 +54,18 @@ function isPalindrome(str) {
   }
   return true;
 }
+
+function countVowelsAndConsonants(str) {
+    let vowels = 0, consonants = 0;
+    
+    for (let char of str.toLowerCase()) {
+      if ('aeiou'.includes(char)) {
+        vowels++;
+      } else if (/[a-z]/.test(char)) {
+        consonants++;
+      }
+    }
+  
+    return `Vowels: ${vowels}, Consonants: ${consonants}`;
+  }
+  
