@@ -7,4 +7,19 @@
     Output: "olleh" 
 
  */
+// 🧪 Solution 1: Built-in Methods (Clean & Easy)
 
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+reverseString("hello"); // Output: "olleh"
+
+// 🔁 Solution 2: Manual Loop
+
+function reverseString(str) {
+  let reversed = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+  }
+  return reversed;
+}
