@@ -23,3 +23,10 @@ function reverseString(str) {
   }
   return reversed;
 }
+
+// 🌀 Solution 3: Recursive (Just for fun)
+
+function reverseString(str) {
+  if (str === "") return "";
+  return reverseString(str.slice(1)) + str[0];
+}
