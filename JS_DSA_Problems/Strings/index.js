@@ -95,7 +95,6 @@ function countVowelsAndConsonants(str) {
         result += str[i];
       }
     }
-  
     return result;
   }
   
