@@ -22,14 +22,7 @@ function reverseString(str) {
   return reverseString(str.slice(1)) + str[0];
 }
 
-/**
- 🔄 Test Cases
 
-console.log(reverseString("hello"));     // "olleh"
-console.log(reverseString(""));          // ""
-console.log(reverseString("a"));         // "a"
-console.log(reverseString("racecar"));   // "racecar"
- */
 
 // 2. Check Palindrome
 // Write a function that checks whether a given string is a palindrome.
