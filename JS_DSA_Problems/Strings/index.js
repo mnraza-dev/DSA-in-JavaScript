@@ -21,9 +21,6 @@ function reverseString(str) {
   if (str === "") return "";
   return reverseString(str.slice(1)) + str[0];
 }
-
-
-
 // 2. Check Palindrome
 // Write a function that checks whether a given string is a palindrome.
 // 📥 Input: "racecar"
@@ -62,8 +59,6 @@ function countVowelsAndConsonants(str) {
     return `Vowels: ${vowels}, Consonants: ${consonants}`;
   }
   
-
-
   function removeDuplicates(str) {
     let result = '';
     let seen = new Set();
