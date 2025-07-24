@@ -41,4 +41,20 @@ function countNumberOfDigits(num) {
   } while (num > 0);
   return count;
 }
-console.log(countNumberOfDigits(12344255))
+console.log(countNumberOfDigits(12344255));
+
+/**
+ * Question - 4 : Palindrome number
+ *  eg: 121  = True
+ **/
+
+function isPalindromeNumber(num) {
+  let reversed = 0;
+  while (num > reversed) {
+    reversed = reversed * 10 + (num % 10);
+    num = Math.floor(num / 10);
+  }
+
+  return num === reversed || num === Math.floor(reversed / 10);
+}
+console.log(isPalindromeNumber(121));
