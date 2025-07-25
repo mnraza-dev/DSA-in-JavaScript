@@ -57,4 +57,16 @@ function isPalindromeNumber(num) {
 
   return num === reversed || num === Math.floor(reversed / 10);
 }
-console.log(isPalindromeNumber(121));
+// console.log(isPalindromeNumber(121));
+
+/**
+ * Question - 5 : Get the length of the last word
+ */
+
+const lengthOfLastWord = function (s) {
+  s.trim();
+  let arr = s.split(" ").filter((item) => item !== "");
+  return arr[arr.length - 1].length;
+};
+
+console.log(lengthOfLastWord("   fly me   to   the moon  "));
