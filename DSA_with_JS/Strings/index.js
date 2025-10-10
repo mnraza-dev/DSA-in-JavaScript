@@ -27,5 +27,13 @@ function reverseString(str) {
     }
     return reversed;
 }
-
 console.log(reverseString("JavaScript")); // tpircSavaJ
+
+// Check if a string is a palindrome
+function isPalindrome(str) {
+    let reversed = str.split("").reverse().join("");
+    return str === reversed;
+}
+
+console.log(isPalindrome("madam")); // true
+console.log(isPalindrome("hello")); // false
