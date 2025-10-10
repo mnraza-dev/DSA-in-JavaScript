@@ -14,3 +14,17 @@ let student = {
 };
 console.log(student.name); // Noor
 console.log(student["marks"]); // 92
+
+//count how many times each number appears in an array 👇
+function countFrequency(arr) {
+  let freq = {};
+
+  for (let num of arr) {
+    freq[num] = (freq[num] || 0) + 1;
+  }
+
+  return freq;
+}
+
+console.log(countFrequency([1, 2, 2, 3, 3, 3]));
+// { '1': 1, '2': 2, '3': 3 }
