@@ -52,3 +52,12 @@ function charFrequency(str) {
 console.log(charFrequency("hello"));
 // { h:1, e:1, l:2, o:1 }
 console.log(charFrequency("Noorullah"));
+
+/**
+ * 💪 Practice Tasks
+ * Write a function that counts how many times "a" appears in a string.
+ * Write a function that returns the longest word in a sentence.
+ * Write a function to remove all spaces from a string.
+ * Write a function that checks if a string is a pangram (contains every letter from a–z at least once).
+ * Convert a string "hello world" → "Hello World" (capitalize each word).
+ */
