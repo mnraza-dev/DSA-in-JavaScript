@@ -57,7 +57,22 @@ console.log(num1 <= num2);
 console.log(true && true); // true
 console.log(true && false); // false
 console.log(false && true); // false
-console.log(false && false); // false       
+console.log(false && false); // false      
+
+// Short Circuiting 
+// In the case of && operator, if the first operand is falsy, it returns the first operand without evaluating the second operand.
+// If the first operand is truthy, it evaluates and returns the second operand.
+
+//Truthy values: 5, 6, "Hello", {}, [], true
+//Falsy values: 0, "", null, undefined, NaN, false apart from these everything is truthy values
+
+console.log(5 && 0); // 0
+console.log(5 && 6); // 6
+console.log(0 && 6); // 0
+console.log(0 && 0); // 0
+console.log(5 && "Hello"); // "Hello"
+console.log(0 && (5 / 0)); // 0
+
 console.log("&& with non boolean", 5 && 0); // 0
 console.log("&& with non boolean", 5 && 6); // 6
 console.log("&& with non boolean", 0 && 6); // 0
@@ -159,3 +174,4 @@ console.log("|| with non boolean", "Hello" || undefined); // "Hello"
 
 console.log(!false); // true
 console.log(!true); // false  
+
