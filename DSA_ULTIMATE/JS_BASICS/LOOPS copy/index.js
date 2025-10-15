@@ -52,11 +52,6 @@ arr.forEach((value, index) => {
 });
 
 // 7. break and continue statements
-// break terminates the nearest loop entirely when a specified condition is met.
-// continue skips the current iteration of the nearest loop and proceeds with the next iteration when a specified condition is met.
-
-// Example of break and continue:
-
 for (let i = 1; i <= 10; i++) {
     if (i === 5) {  
         break; // Exit the loop when i is 5
@@ -93,11 +88,4 @@ outerLoop: for (let i = 1; i <= 3; i++) {
         console.log(`i: ${i}, j: ${j}`);
     }
 }
-
-// unary operators
-a = 10;
-console.log(a++); // 10 (returns the value before incrementing)
-console.log(++a); // 12 (increments first, then returns the value)
-console.log(a--); // 12 (returns the value before decrementing)
-console.log(--a); // 10 (decrements first, then returns the value)
 
