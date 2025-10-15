@@ -43,9 +43,65 @@ console.log("x **= y",x);
 
 // a == b checks if a and b are equal in value (abstract equality) or a or b can be into some other type and make them equal in value
 
+console.log("5" == 5); // true
+console.log(0 == false); // true
+console.log(1 == true); // true
+console.log(null == undefined); // true
+console.log(null == false); // false 
+console.log(undefined == false); // false
+console.log(NaN == NaN); // false
+console.log([] == false); // true
+console.log([1] == true); // true
+console.log([1,2] == true); // false
+console.log([1,2] == "1,2"); // true
+console.log({} == false); // false
+console.log({} == true); // false
+console.log({} == {}); // false 
+console.log([] == ![]); // true
+console.log("" == false); // true
+console.log(" " == false); // false
+console.log("0" == false); // true  
+console.log(" \t \n " == false); // true
+console.log(" \t \n " == 0); // true 
+console.log(" \t \n " == "0"); // false
+console.log(" \t \n " == ""); // false
+console.log(" \t \n " == " "); // true
+console.log(" \t \n " == "  "); // false
+console.log(" \t \n " == "   "); // false
+console.log(" \t \n " == "    "); // false
+console.log(" \t \n " == "     "); // false
+console.log(" \t \n " == "      "); // false
+console.log(" \t \n " == "       "); // false
+console.log(" \t \n " == "        "); // false
+console.log(" \t \n " == "         "); // false
+console.log(" \t \n " == "          "); // false    
+
+
 // a === b checks if a and b are equal in value and type (strict equality) no type conversion is done
+console.log(5===5); // true
+console.log("5"===5); // false
+console.log(0===false); // false
+console.log(1===true); // false
+console.log(null===undefined); // false
+console.log(NaN===NaN); // false
+// console.log([] === false); // false
+// console.log([1] === true); // false
+// console.log([1,2] === true); // false
+// console.log([1,2] === "1,2"); // false
 
 // Similarly, a != b checks if a and b are not equal in value (abstract inequality) or a or b can be into some other type and make them not equal in value
+console.log(5 != 6); // true
+console.log("5" != 5); // false
+console.log(0 != false); // false
+console.log(1 != true); // false
+console.log(null != undefined); // false
+console.log(null != false); // true
+console.log(undefined != false); // true
+console.log(NaN != NaN); // true
+console.log([] != false); // false
+console.log([1] != true); // false
+console.log([1,2] != true); // true
+console.log([1,2] != "1,2"); // false
 
 // a !== b checks if a and b are not equal in value or type (strict inequality) no type conversion is done 
 
@@ -236,6 +292,12 @@ console.log(!!(5 || "Hello" || {})); // true (double negation returns the origin
 console.log(!!(0 || "Hello" || {})); // true (double negation returns the original boolean value)
 
 // Bitwise Operators
+
+// Operates on the binary representations of numbers
+// Each bit is treated as a separate entity
+// Common bitwise operators: AND (&), OR (|), XOR (^), NOT (~), Left Shift (<<), Right Shift (>>)
+
+
 let p = 5; // (Binary: 0101)
 let q = 3; // (Binary: 0011)    
 console.log(p & q); // Bitwise AND (Binary: 0001) => 1
