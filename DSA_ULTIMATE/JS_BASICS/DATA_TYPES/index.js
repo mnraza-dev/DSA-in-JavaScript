@@ -22,6 +22,4 @@
  console.log(a);
  console.log(b);
  console.log(typeof a); // object (this is a known quirk in JavaScript)
-
-
- 
+ console.log(typeof b); // undefined
