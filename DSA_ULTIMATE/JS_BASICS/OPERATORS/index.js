@@ -290,15 +290,3 @@ console.log(!!(5 && 0 && "Hello")); // false (double negation returns the origin
 console.log(!!(0 || "" || null)); // false (double negation returns the original boolean value)
 console.log(!!(5 || "Hello" || {})); // true (double negation returns the original boolean value)
 console.log(!!(0 || "Hello" || {})); // true (double negation returns the original boolean value)
-
-// Bitwise Operators
-
-// Operates on the binary representations of numbers
-// Each bit is treated as a separate entity
-// Common bitwise operators: AND (&), OR (|), XOR (^), NOT (~), Left Shift (<<), Right Shift (>>)
-
-
-let p = 5; // (Binary: 0101)
-let q = 3; // (Binary: 0011)    
-console.log(p & q); // Bitwise AND (Binary: 0001) => 1
-console.log(p | q); // Bitwise OR (Binary: 0111) => 7
