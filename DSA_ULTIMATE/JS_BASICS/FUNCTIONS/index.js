@@ -24,7 +24,12 @@
 // Functions help us achieve that by allowing us to define a block of code once and reuse it multiple times.
 // we need to debug the code in case of any issues.
 
+// CALLSTACK :
+// Every entry of function call is stored in the call stack.
+// When a function is called, a new entry is added to the call stack.
+// When the function execution is completed, the entry is removed from the call stack.
 
+// NOTE: if we do not return anything from a function, it will return undefined by default.
 
 // 1. Function Declaration
 // A function declaration defines a named function.
