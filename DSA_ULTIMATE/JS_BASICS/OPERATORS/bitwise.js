@@ -21,3 +21,7 @@ console.log(p ^ q); // Bitwise XOR (Binary: 0110) => 6
 console.log(~p);    // Bitwise NOT (Binary: 1010) => -6 (inverts bits and adds 1 in two's complement)
 console.log(p << 1); // Left Shift (Binary: 1010) => 10 (shifts bits to the left, filling with 0)
 console.log(p >> 1); // Right Shift (Binary: 0010) => 2 (shifts bits to the right, preserving the sign bit)
+
+// Note: Bitwise operations convert numbers to 32-bit signed integers
+
+
