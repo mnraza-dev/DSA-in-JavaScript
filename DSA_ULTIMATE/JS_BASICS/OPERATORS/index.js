@@ -67,9 +67,9 @@ console.log(false && false); // false
 //Falsy values: 0, "", null, undefined, NaN, false apart from these everything is truthy values
 
 console.log(5 && 0); // 0
-console.log(5 && 6); // 6
-console.log(0 && 6); // 0
-console.log(0 && 0); // 0
+console.log(5 && 6); // 6  => coz 5 is truthy value so it evaluates and returns second operand
+console.log(0 && 6); // 0  => coz 0 is falsy value so it returns first operand without evaluating second operand
+console.log(0 && 0); // 0 => coz 0 is falsy value so it returns first operand without evaluating second operand
 console.log(5 && "Hello"); // "Hello"
 console.log(0 && (5 / 0)); // 0
 
@@ -128,6 +128,20 @@ console.log(true || true); // true
 console.log(true || false); // true
 console.log(false || true); // true
 console.log(false || false); // false
+
+// Short Circuiting
+
+// In the case of || operator, if the first operand is truthy, it returns the first operand without evaluating the second operand.
+// If the first operand is falsy, it evaluates and returns the second operand.
+
+console.log(5 || 0); // 5 => coz 5 is truthy value so it returns first operand without evaluating second operand
+console.log(0 || 6); // 6 => coz 0 is falsy value so it evaluates and returns second operand
+console.log(5 || 6); // 5 => coz 5 is truthy value so it returns first operand without evaluating second operand
+console.log(0 || 0); // 0 => coz 0 is falsy value so it evaluates and returns second operand
+console.log(5 || "Hello"); // 5 => coz 5 is truthy value so it returns first operand without evaluating second operand
+console.log(0 || "Hello"); // "Hello" => coz 0 is falsy value so it evaluates and returns second operand
+console.log(0 || (5 / 0)); // Infinity => coz 0 is falsy value so it evaluates and returns second operand
+
 console.log("|| with non boolean", 5 || 0); // 5
 console.log("|| with non boolean", 0 || 6); // 6
 console.log("|| with non boolean", 5 || 6); // 5    
