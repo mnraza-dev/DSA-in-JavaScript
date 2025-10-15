@@ -38,14 +38,25 @@ x **= y; // x = x ** y (Exponentiation assignment)
 console.log("x **= y",x);
 
 // Comparison Operators
-console.log(num1 == num2); // Equal to
-console.log(num1 != num2); // Not equal to
+
+// Returns a boolean value (true or false)
+
+// a == b checks if a and b are equal in value (abstract equality) or a or b can be into some other type and make them equal in value
+
+// a === b checks if a and b are equal in value and type (strict equality) no type conversion is done
+
+// Similarly, a != b checks if a and b are not equal in value (abstract inequality) or a or b can be into some other type and make them not equal in value
+
+// a !== b checks if a and b are not equal in value or type (strict inequality) no type conversion is done 
+
+console.log(num1 == num2);  // false   // Equal to  - abstract equality
+console.log(num1 != num2);  // true    // Not equal to
 console.log(num1 === num2); // Strict equal to
 console.log(num1 !== num2); // Strict not equal to
-console.log(num1 > num2);
-console.log(num1 < num2);
-console.log(num1 >= num2);
-console.log(num1 <= num2);
+console.log(num1 > num2); // Greater than
+console.log(num1 < num2); // Less than
+console.log(num1 >= num2); // Greater than or equal to
+console.log(num1 <= num2); // Less than or equal to
 
 // Logical Operators
 /**
@@ -188,4 +199,44 @@ console.log("|| with non boolean", "Hello" || undefined); // "Hello"
 
 console.log(!false); // true
 console.log(!true); // false  
+console.log(!0); // true
+console.log(!5); // false
+console.log(!""); // true
+console.log(!"Hello"); // false
+console.log(!null); // true
+console.log(!undefined); // true
+console.log(!NaN); // true  
+console.log(!{}); // false
+console.log(![]); // false
+console.log(!" "); // false (a string with a space is a truthy value)
+console.log(!"0"); // false (a string with "0" is a truthy value)
+console.log(!"false"); // false (a string with "false" is a truthy value)
+console.log(!"null"); // false (a string with "null" is a truthy value)
+console.log(!"undefined"); // false (a string with "undefined" is a truthy value)
+console.log(!"NaN"); // false (a string with "NaN" is a truthy value)
+console.log(!!"Hello"); // true (double negation returns the original boolean value)
+console.log(!!0); // false (double negation returns the original boolean value)
+console.log(!!""); // false (double negation returns the original boolean value)
+console.log(!!null); // false (double negation returns the original boolean value)
+console.log(!!undefined); // false (double negation returns the original boolean value)
+console.log(!!NaN); // false (double negation returns the original boolean value)
+console.log(!!5); // true (double negation returns the original boolean value)
+console.log(!!{}); // true (double negation returns the original boolean value) 
+console.log(!![]); // true (double negation returns the original boolean value)
+console.log(!!" "); // true (double negation returns the original boolean value)
+console.log(!!"0"); // true (double negation returns the original boolean value)
+console.log(!!"false"); // true (double negation returns the original boolean value)
+console.log(!!"null"); // true (double negation returns the original boolean value)
+console.log(!!"undefined"); // true (double negation returns the original boolean value)
+console.log(!!"NaN"); // true (double negation returns the original boolean value)
+console.log(!!(5 && "Hello" && {})); // true (double negation returns the original boolean value)
+console.log(!!(5 && 0 && "Hello")); // false (double negation returns the original boolean value)
+console.log(!!(0 || "" || null)); // false (double negation returns the original boolean value)
+console.log(!!(5 || "Hello" || {})); // true (double negation returns the original boolean value)
+console.log(!!(0 || "Hello" || {})); // true (double negation returns the original boolean value)
 
+// Bitwise Operators
+let p = 5; // (Binary: 0101)
+let q = 3; // (Binary: 0011)    
+console.log(p & q); // Bitwise AND (Binary: 0001) => 1
+console.log(p | q); // Bitwise OR (Binary: 0111) => 7
