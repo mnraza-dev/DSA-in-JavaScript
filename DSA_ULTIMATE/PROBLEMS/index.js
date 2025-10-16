@@ -25,4 +25,15 @@ function findMinimum(x, y,z) {
 }
 // console.log(findMinimum(912,50,106));
 
-// Q.3 find the minimum value of given input values 
+// Q.3 check if a valid traingle can be formed by given three integers 
+
+function isValidTraingle(a,b,c) {
+
+    if(a + b > c &&  b + c > a &&  a + c > b){
+        return `Yes it can form a traingle`
+    }
+    else{
+        return "Sorry you can't form a traingle"
+    }
+}
+console.log(isValidTraingle(11,0,12));
