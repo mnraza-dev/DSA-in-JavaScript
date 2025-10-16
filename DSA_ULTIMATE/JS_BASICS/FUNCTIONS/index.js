@@ -31,6 +31,12 @@
 
 // NOTE: if we do not return anything from a function, it will return undefined by default.
 
+// Note: Functions are first-class citizens in JavaScript, meaning they can be treated like any other variable.
+
+// This means we can pass functions as arguments to other functions, return them from other functions, and assign them to variables or object properties.
+// Example: Using functions as first-class citizens
+
+
 // 1. Function Declaration
 // A function declaration defines a named function.
 
@@ -188,10 +194,7 @@ console.log(concatenateStrings("This", "is", "a", "test.")); // "This is a test.
 console.log(concatenateStrings());           // "" (no arguments passed)
 console.log(concatenateStrings("SingleString")); // "SingleString"
 
-// Note: Functions are first-class citizens in JavaScript, meaning they can be treated like any other variable.
 
-// This means we can pass functions as arguments to other functions, return them from other functions, and assign them to variables or object properties.
-// Example: Using functions as first-class citizens
 
 const operations = {
     add: (a, b) => a + b,
@@ -318,4 +321,5 @@ console.log(power(3, 0)); // 1
 console.log(power(1, 100)); // 1
 console.log(power(0, 5));   // 0
 console.log(power(0, 0));   // 1 (by convention)
+
 
