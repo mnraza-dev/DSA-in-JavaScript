@@ -23,3 +23,17 @@
  console.log(b);
  console.log(typeof a); // object (this is a known quirk in JavaScript)
  console.log(typeof b); // undefined
+
+
+
+ // String
+ // Strings can be defined using single quotes, double quotes, or backticks (template literals).
+ 
+ let str = "Hello, World!";
+ let str2 = 'Hello, World!';
+ let strObj = new String("Hello, World!"); // String object
+ let str3 = `Hello, World!`; // Template literal    
+ let str4 = `Hello, ${str}`; // Template literal with interpolation
+
+ console.log(str);
+ console.log(typeof str); // string
