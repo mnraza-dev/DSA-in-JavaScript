@@ -187,3 +187,135 @@ console.log(concatenateStrings("Hello", "world!")); // "Hello world!"
 console.log(concatenateStrings("This", "is", "a", "test.")); // "This is a test."
 console.log(concatenateStrings());           // "" (no arguments passed)
 console.log(concatenateStrings("SingleString")); // "SingleString"
+
+// Note: Functions are first-class citizens in JavaScript, meaning they can be treated like any other variable.
+
+// This means we can pass functions as arguments to other functions, return them from other functions, and assign them to variables or object properties.
+// Example: Using functions as first-class citizens
+
+const operations = {
+    add: (a, b) => a + b,
+    subtract: (a, b) => a - b,
+    multiply: (a, b) => a * b,
+    divide: (a, b) => a / b,
+};
+console.log(operations.add(10, 5)); // 15
+console.log(operations.subtract(10, 5)); // 5
+console.log(operations.multiply(10, 5)); // 50
+console.log(operations.divide(10, 5)); // 2
+
+// Example: Using built-in functions
+
+console.log(Math.sqrt(16));
+console.log(Math.max(10, 20, 5));
+console.log(JSON.stringify({ name: "Alice", age: 25 }));
+Math.abs(-10);
+Math.pow(2, 3);
+Math.random();
+Math.floor(4.7);
+Math.ceil(4.3);
+Math.round(4.5);
+parseInt("42");
+parseFloat("3.14");
+isNaN(NaN); 
+isFinite(10 / 2);
+Date.now();
+// Date.parse("2023-10-01");
+// Date.prototype.toISOString.call(new Date());
+// Date.prototype.toLocaleDateString.call(new Date());
+// Date.prototype.toLocaleTimeString.call(new Date());
+setTimeout(() => console.log("Delayed message"), 1000);
+setInterval(() => console.log("Repeated message"), 2000);
+
+// Example: Function returning another function
+function makeMultiplier(factor) {
+    return function(x) {
+        return x * factor;
+    };
+}
+const double = makeMultiplier(2);
+const triple = makeMultiplier(3);
+console.log(double(5)); // 10
+console.log(triple(5)); // 15
+console.log(makeMultiplier(4)(5)); // 20    
+console.log(makeMultiplier(0)(5)); // 0
+console.log(makeMultiplier(-2)(5)); // -10
+console.log(makeMultiplier(1)(5)); // 5
+console.log(makeMultiplier(2)(-3)); // -6
+console.log(makeMultiplier(2)(0)); // 0
+console.log(makeMultiplier(2)(2.5)); // 5
+console.log(makeMultiplier(2)(-2.5)); // -5
+
+
+// Example: Function as an argument
+function filterArray(arr, predicate) {
+    const result = [];
+    for (const item of arr) {
+        if (predicate(item)) {
+            result.push(item);
+        }
+    }
+    return result;
+}
+
+const numbers = [1, 2, 3, 4, 5, 6];
+const evenNumbers = filterArray(numbers, num => num % 2 === 0);
+const oddNumbers = filterArray(numbers, num => num % 2 !== 0);
+console.log(evenNumbers);
+console.log(oddNumbers);
+console.log(filterArray(numbers, num => num > 3));
+console.log(filterArray(numbers, num => num <= 3));
+console.log(filterArray(numbers, num => num === 5));
+console.log(filterArray(numbers, num => num !== 5));
+console.log(filterArray(numbers, () => true));
+
+
+// Example: Function with closure
+function makeCounter() {
+    let count = 0; // count is a private variable   
+    return function() {
+        count++;
+        return count;
+    }
+}
+const counter = makeCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter()); // 3
+const anotherCounter = makeCounter();
+console.log(anotherCounter()); // 1 (separate instance)
+console.log(anotherCounter()); // 2
+console.log(counter()); // 4 (original instance)
+console.log(anotherCounter()); // 3
+console.log(counter()); // 5
+console.log(anotherCounter()); // 4
+console.log(counter()); // 6
+console.log(anotherCounter()); // 5
+console.log(counter()); // 7
+console.log(anotherCounter()); // 6
+console.log(counter()); // 8
+console.log(anotherCounter()); // 7
+console.log(counter()); // 9
+
+// Example: Recursive function to calculate power
+function power(base, exponent) {
+    if (exponent === 0) {
+        return 1;
+    }
+    return base * power(base, exponent - 1);
+}
+console.log(power(2, 3)); // 8
+console.log(power(5, 0)); // 1
+console.log(power(3, 4)); // 81
+console.log(power(2, 5)); // 32
+console.log(power(10, 2)); // 100
+console.log(power(7, 3)); // 343
+console.log(power(4, 2)); // 16
+console.log(power(6, 1)); // 6
+console.log(power(9, 3)); // 729
+console.log(power(2, 10)); // 1024
+console.log(power(3, 0)); // 1
+console.log(power(1, 100)); // 1
+console.log(power(0, 5));   // 0
+console.log(power(0, 0));   // 1 (by convention)
+
