@@ -36,4 +36,32 @@ function isValidTraingle(a,b,c) {
         return "Sorry you can't form a traingle"
     }
 }
-console.log(isValidTraingle(11,0,12));
+// console.log(isValidTraingle(11,0,12));
+
+// Q.4 check if the given triangle is equilateral or scalene or isosceles
+
+
+
+
+
+
+
+// Problems in Loops
+
+// Q.1 
+
+
+
+
+
+
+// Q.6 check if the given triangle is equilateral or scalene or isosceles
+
+
+
+
+
+
+
+// Q.7 
+

@@ -2,7 +2,7 @@
 
 // Decimal Number System : 0,1,2,3,4,5,6,7,8,9,10,11...
 
-// Sysmbols : these are very helpful in doing counting
+// Symbols : these are very helpful in doing counting
 
 // Decimal Number System : 0,1,2,3,4,5,6,7,8,9,10,11...
 // There are 10 unique symbols and rest all the numbers are written using these unique symbols
